@@ -14,3 +14,6 @@ AUTOTHROTTLE_ENABLED = False
 
 COOKIES_ENABLED = False
 ROBOTSTXT_OBEY = False
+
+# Breadth first observation
+DEPTH_PRIORITY = -1
