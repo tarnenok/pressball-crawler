@@ -2,23 +2,38 @@ import scrapy
 from pymongo import MongoClient
 from datetime import datetime
 
+from scrapy.spiders import Rule
+from scrapy.linkextractors import LinkExtractor
 
-class PressballSpider(scrapy.Spider):
+
+class PressballSpider(scrapy.spiders.CrawlSpider):
     name = 'pressball'
-    start_urls = ['https://www.pressball.by']
-    allowed_domains = ['www.pressball.by']
+    # start_urls = ['https://www.pressball.by']
+    start_urls = ['https://www.pressball.by/events']
+    allowed_domains = ['pressball.by']
     server = MongoClient('mongodb://localhost:27017/')
 
-    def parse(self, response):
-        links = response.css('a::attr(href)').extract()
+    rules = (
+        Rule(LinkExtractor(allow=(),
+                           deny=(
+                               r'pressball\.by\/events',
+                               r'forum.pressball\.by\/posting\.php',
+                               r'pressball\.by\/index.php',
+                               r'pressball\.by\/voting\/vote.(pl|php)',
+                               r'pressball\.by\/search\.php'
+                           )),
+             callback='save_link_meta', follow=True),
+        Rule(LinkExtractor(allow=(r'pressball\.by\/news', ),
+                           deny=(
+                               r'\?page=\d+'
+                           )),
+             callback='save_link_meta', follow=True)
+    )
 
+    def save_link_meta(self, response):
         self.server['crawling']['pressball_pages'].insert_one({
             'url': response.url,
             'latency': response.meta['download_latency'],
             'time': datetime.now(),
-            'links': 'links'
+            'links': response.css('a::attr(href)').extract()
         })
-
-        for link in links:
-            next_link = response.urljoin(link)
-            yield scrapy.Request(next_link)
