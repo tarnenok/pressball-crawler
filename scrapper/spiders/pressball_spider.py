@@ -31,9 +31,13 @@ class PressballSpider(scrapy.spiders.CrawlSpider):
     )
 
     def save_link_meta(self, response):
+        referer = response.request.headers.get('Referer', None)
+        referer_str = referer.decode() if referer is not None else None
+
         self.server['crawling']['pressball_pages'].insert_one({
             'url': response.url,
             'latency': response.meta['download_latency'],
             'time': datetime.now(),
-            'links': response.css('a::attr(href)').extract()
+            'links': [link for link in response.css('a::attr(href)').extract() if self.allowed_domains[0] in link],
+            'referer': referer_str
         })
