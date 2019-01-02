@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GrepConsole">
+    <option name="pinnedGrepConsolesState">
+      <PinnedGrepConsolesState>
+        <option name="map">
+          <map>
+            <entry>
+              <key>
+                <RunConfigurationRef>
+                  <option name="icon" value="python.png" />
+                  <option name="name" value="main" />
+                </RunConfigurationRef>
+              </key>
+              <value>
+                <Pins>
+                  <option name="pins">
+                    <list>
+                      <Pin>
+                        <option name="consoleUUID" value="2c003e4b-c42e-4fcc-981a-7043df8b18b4" />
+                        <option name="grepModel">
+                          <GrepModel>
+                            <option name="expression" value="INFO: Crawled" />
+                            <option name="unlessExpression" value="" />
+                          </GrepModel>
+                        </option>
+                      </Pin>
+                      <Pin>
+                        <option name="consoleUUID" value="c0c7e106-f3f8-4984-adc6-1738bd63695e" />
+                        <option name="grepModel">
+                          <GrepModel>
+                            <option name="expression" value="INFO: Crawled" />
+                            <option name="unlessExpression" value="" />
+                          </GrepModel>
+                        </option>
+                      </Pin>
+                      <Pin>
+                        <option name="consoleUUID" value="c9b2190d-9d30-4d6d-8cf1-0fb46559890c" />
+                        <option name="grepModel">
+                          <GrepModel>
+                            <option name="expression" value="INFO: Crawled" />
+                            <option name="unlessExpression" value="" />
+                          </GrepModel>
+                        </option>
+                      </Pin>
+                      <Pin>
+                        <option name="consoleUUID" value="d0b6c943-43fb-47d7-917b-595bbd393561" />
+                        <option name="grepModel">
+                          <GrepModel>
+                            <option name="expression" value="INFO: Crawled" />
+                            <option name="unlessExpression" value="" />
+                          </GrepModel>
+                        </option>
+                      </Pin>
+                      <Pin>
+                        <option name="consoleUUID" value="a99fde08-a13f-46b8-a617-c3d82dda4bec" />
+                        <option name="grepModel">
+                          <GrepModel>
+                            <option name="expression" value="INFO: Crawled" />
+                            <option name="unlessExpression" value="" />
+                          </GrepModel>
+                        </option>
+                      </Pin>
+                      <Pin>
+                        <option name="consoleUUID" value="b20f0659-9299-47d1-aa23-8702cccd285b" />
+                        <option name="grepModel">
+                          <GrepModel>
+                            <option name="expression" value="INFO: Crawled" />
+                            <option name="unlessExpression" value="" />
+                          </GrepModel>
+                        </option>
+                      </Pin>
+                      <Pin>
+                        <option name="consoleUUID" value="7bd94ce6-8ad6-4681-87f9-a7a004fd0ef9" />
+                        <option name="grepModel">
+                          <GrepModel>
+                            <option name="expression" value="INFO: Crawled" />
+                            <option name="unlessExpression" value="" />
+                          </GrepModel>
+                        </option>
+                      </Pin>
+                      <Pin>
+                        <option name="consoleUUID" value="7abc210a-8f36-4f00-9453-8873e54c6406" />
+                        <option name="grepModel">
+                          <GrepModel>
+                            <option name="expression" value="INFO: Crawled" />
+                            <option name="unlessExpression" value="" />
+                          </GrepModel>
+                        </option>
+                      </Pin>
+                      <Pin>
+                        <option name="consoleUUID" value="31579405-c0cf-493b-be10-0f96853a6a00" />
+                        <option name="grepModel">
+                          <GrepModel>
+                            <option name="expression" value="INFO: Crawled" />
+                            <option name="unlessExpression" value="" />
+                          </GrepModel>
+                        </option>
+                      </Pin>
+                      <Pin>
+                        <option name="consoleUUID" value="30d25180-8a8c-4769-9f65-c392ff189930" />
+                        <option name="grepModel">
+                          <GrepModel>
+                            <option name="expression" value="INFO: Crawled" />
+                            <option name="unlessExpression" value="" />
+                          </GrepModel>
+                        </option>
+                      </Pin>
+                      <Pin>
+                        <option name="consoleUUID" value="1d428917-9d4a-4b2d-97b5-fe4859c18b21" />
+                        <option name="grepModel">
+                          <GrepModel>
+                            <option name="expression" value="INFO: Crawled" />
+                            <option name="unlessExpression" value="" />
+                          </GrepModel>
+                        </option>
+                      </Pin>
+                      <Pin>
+                        <option name="consoleUUID" value="24eb2084-65da-4245-bf2e-f5d9d1b06408" />
+                        <option name="grepModel">
+                          <GrepModel>
+                            <option name="expression" value="INFO: Crawled" />
+                            <option name="unlessExpression" value="" />
+                          </GrepModel>
+                        </option>
+                      </Pin>
+                      <Pin>
+                        <option name="consoleUUID" value="a26ae640-5555-4f88-88bf-87485b054233" />
+                        <option name="grepModel">
+                          <GrepModel>
+                            <option name="expression" value="INFO: Crawled" />
+                            <option name="unlessExpression" value="" />
+                          </GrepModel>
+                        </option>
+                      </Pin>
+                      <Pin>
+                        <option name="consoleUUID" value="9e3eaf9e-eca5-4555-b04a-4aeb8bf5c6ff" />
+                        <option name="grepModel">
+                          <GrepModel>
+                            <option name="expression" value="INFO: Crawled" />
+                            <option name="unlessExpression" value="" />
+                          </GrepModel>
+                        </option>
+                      </Pin>
+                      <Pin>
+                        <option name="consoleUUID" value="b9837a30-0c0d-4031-b6d2-2777fbf2e48a" />
+                        <option name="grepModel">
+                          <GrepModel>
+                            <option name="expression" value="INFO: Crawled" />
+                            <option name="unlessExpression" value="" />
+                          </GrepModel>
+                        </option>
+                      </Pin>
+                      <Pin>
+                        <option name="consoleUUID" value="58affd40-dc6f-4db7-bda0-9c9a578ef199" />
+                        <option name="grepModel">
+                          <GrepModel>
+                            <option name="expression" value="INFO: Crawled" />
+                            <option name="unlessExpression" value="" />
+                          </GrepModel>
+                        </option>
+                      </Pin>
+                    </list>
+                  </option>
+                </Pins>
+              </value>
+            </entry>
+          </map>
+        </option>
+      </PinnedGrepConsolesState>
+    </option>
+  </component>
+</project>
