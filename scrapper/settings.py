@@ -16,4 +16,6 @@ COOKIES_ENABLED = False
 ROBOTSTXT_OBEY = False
 
 # Breadth first observation
-DEPTH_PRIORITY = -1
+DEPTH_PRIORITY = 1
+SCHEDULER_DISK_QUEUE = 'scrapy.squeues.PickleFifoDiskQueue'
+SCHEDULER_MEMORY_QUEUE = 'scrapy.squeues.FifoMemoryQueue'
