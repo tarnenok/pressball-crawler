@@ -8,26 +8,25 @@ from scrapy.linkextractors import LinkExtractor
 
 class PressballSpider(scrapy.spiders.CrawlSpider):
     name = 'pressball'
-    # start_urls = ['https://www.pressball.by']
-    start_urls = ['https://www.pressball.by/events']
+    start_urls = ['https://www.pressball.by']
     allowed_domains = ['pressball.by']
-    server = MongoClient('mongodb://localhost:27017/')
+    server = MongoClient('mongodb://127.0.0.1:27017/')
 
     rules = (
         Rule(LinkExtractor(allow=(),
                            deny=(
                                r'pressball\.by\/events',
-                               r'forum.pressball\.by\/posting\.php',
-                               r'pressball\.by\/index.php',
-                               r'pressball\.by\/voting\/vote.(pl|php)',
-                               r'pressball\.by\/search\.php'
+                               r'forum\.pressball',
+                               r'pressball\.by\/index\.php',
+                               r'pressball\.by\/voting\/vote\.(pl|php)',
+                               r'pressball\.by\/search\.php',
+                               r'pressball\.by\/news\/.*\d+.*page=\d+',
+                               r'pressball\.by\/photo',
+                               r'pressball\.by\/discuss_lenta\.php',
+                               r'pressball\.by\/discuss_news\.php',
+                               r'pressball\.by\/footballstat'
                            )),
              callback='save_link_meta', follow=True),
-        Rule(LinkExtractor(allow=(r'pressball\.by\/news', ),
-                           deny=(
-                               r'\?page=\d+'
-                           )),
-             callback='save_link_meta', follow=True)
     )
 
     def save_link_meta(self, response):
