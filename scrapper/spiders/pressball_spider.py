@@ -24,7 +24,9 @@ class PressballSpider(scrapy.spiders.CrawlSpider):
                                r'pressball\.by\/photo',
                                r'pressball\.by\/discuss_lenta\.php',
                                r'pressball\.by\/discuss_news\.php',
-                               r'pressball\.by\/footballstat'
+                               r'pressball\.by\/footballstat',
+                               r'pressball\.by\/forum',
+                               r'pressball\.by\/tv'
                            )),
              callback='save_link_meta', follow=True),
     )
