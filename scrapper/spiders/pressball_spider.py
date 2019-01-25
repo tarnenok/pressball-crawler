@@ -8,26 +8,24 @@ from scrapy.linkextractors import LinkExtractor
 
 class PressballSpider(scrapy.spiders.CrawlSpider):
     name = 'pressball'
-    start_urls = ['https://www.pressball.by']
+    start_urls = ['https://www.pressball.by',
+                  'https://www.pressball.by/news',
+                  'https://www.pressball.by/pbonline',
+                  'https://www.pressball.by/articles']
+
     allowed_domains = ['pressball.by']
     server = MongoClient('mongodb://127.0.0.1:27017/')
 
     rules = (
-        Rule(LinkExtractor(allow=(),
-                           deny=(
-                               r'pressball\.by\/events',
-                               r'forum\.pressball',
-                               r'pressball\.by\/index\.php',
-                               r'pressball\.by\/voting\/vote\.(pl|php)',
-                               r'pressball\.by\/search\.php',
-                               r'pressball\.by\/news\/.*\d+.*page=\d+',
-                               r'pressball\.by\/photo',
-                               r'pressball\.by\/discuss_lenta\.php',
-                               r'pressball\.by\/discuss_news\.php',
-                               r'pressball\.by\/footballstat',
-                               r'pressball\.by\/forum',
-                               r'pressball\.by\/tv'
-                           )),
+        Rule(LinkExtractor(allow=(r'pressball\.by\/news\/\w+\/\d+\/?',
+                                  r'pressball\.by\/news\/?\?page=\d+',
+
+                                  r'pressball\.by\/articles\/\w+\/\w+\/\d+\/?',
+                                  r'pressball\.by\/articles\/?\?p=\d+',
+
+                                  r'pressball\.by\/pbonline\/\w+\/\d+\/?',
+                                  r'pressball\.by\/pbonline\/?\?p=\d+',),
+                           deny=()),
              callback='save_link_meta', follow=True),
     )
 
